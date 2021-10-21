@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EMaDl0Ure/tfOGq/FjnX0KFx31UpY6nTD5/NZ0w7J4AJVrTNM32zYAyuwex6szqFdj7e0825L60foWDE9jP+5w==",
+  "dgSpecHash": "hRUnj9Y18dknH6NKQq3yDkhAZAdnjhwq7n3pTZ3Ct+fGGgKCPRHoIBSFyX2N+12qq6j4VjlIZAzTr2at0UW7Bw==",
   "success": true,
   "projectFilePath": "C:\\Users\\temit\\source\\repos\\YosioluwaOsibemekun\\YosioluwaOsibemekun\\YosioluwaOsibemekun.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
     "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\temit\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\temit\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
     "C:\\Users\\temit\\.nuget\\packages\\mimekit\\2.15.1\\mimekit.2.15.1.nupkg.sha512",
     "C:\\Users\\temit\\.nuget\\packages\\portable.bouncycastle\\1.8.10\\portable.bouncycastle.1.8.10.nupkg.sha512",
     "C:\\Users\\temit\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
