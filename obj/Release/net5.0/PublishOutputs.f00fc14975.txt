@@ -1,4 +1,5 @@
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\YosioluwaOsibemekun.exe
+C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\12345.jpg
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\css\bootstrap.css
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\css\maicons.css
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\css\minibar.virtual.css

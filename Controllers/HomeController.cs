@@ -59,19 +59,27 @@ namespace YosioluwaOsibemekun.Controllers
         {
             try
             {
-                //Name the File
-                string fileName = "osibemekun_temitoyosi_resume.pdf";
 
-                //Build the File Path.
-                var webRoot = _env.WebRootPath;
+                string filePath = "~/documents/osibemekun_temitoyosi_resume.pdf";
 
-                string path = System.IO.Path.Combine(webRoot, @"documents\osibemekun_temitoyosi_resume.pdf");
+                Response.Headers.Add("Content-Disposition", "inline; filename=osibemekun_temitoyosi_resume.pdf");
 
-                //Read the File data into Byte Array.
-                byte[] bytes = System.IO.File.ReadAllBytes(path);
+                return File(filePath, "application/pdf");
 
-                //Send the File to Download.
-                return File(bytes, "application/octet-stream", fileName);
+
+                ////Name the File
+                //string fileName = "osibemekun_temitoyosi_resume.pdf";
+
+                ////Build the File Path.
+                //var webRoot = _env.WebRootPath;
+
+                //string path = System.IO.Path.Combine(webRoot, @"documents\osibemekun_temitoyosi_resume.pdf");
+
+                ////Read the File data into Byte Array.
+                //byte[] bytes = System.IO.File.ReadAllBytes(path);
+
+                ////Send the File to Download.
+                //return File(bytes, "application/octet-stream", fileName);
             }
             catch (Exception)
             {
@@ -87,19 +95,27 @@ namespace YosioluwaOsibemekun.Controllers
         {
             try
             {
-                //Name the File
-                string fileName = "osibemekun_temitoyosi_resume.docx";
 
-                //Build the File Path.
-                var webRoot = _env.WebRootPath;
+                string filePath = "~/documents/osibemekun_temitoyosi_resume.docx";
+
+                Response.Headers.Add("Content-Disposition", "inline; filename=osibemekun_temitoyosi_resume.docx");
+
+                return File(filePath, "application/docx");
+
+
+                ////Name the File
+                //string fileName = "osibemekun_temitoyosi_resume.docx";
+
+                ////Build the File Path.
+                //var webRoot = _env.WebRootPath;
                 
-                string path = System.IO.Path.Combine(webRoot, @"documents\osibemekun_temitoyosi_resume.docx");
+                //string path = System.IO.Path.Combine(webRoot, @"documents\osibemekun_temitoyosi_resume.docx");
 
-                //Read the File data into Byte Array.
-                byte[] bytes = System.IO.File.ReadAllBytes(path);
+                ////Read the File data into Byte Array.
+                //byte[] bytes = System.IO.File.ReadAllBytes(path);
 
-                //Send the File to Download.
-                return File(bytes, "application/octet-stream", fileName);
+                ////Send the File to Download.
+                //return File(bytes, "application/octet-stream", fileName);
             }
             catch (Exception)
             {
