@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Hangfire" Version="1.7.28" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.7.28" />
     <PackageReference Include="MailKit" Version="2.15.0" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.10" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
     <PackageReference Include="MimeKit" Version="2.15.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
   </ItemGroup>
 
 </Project>

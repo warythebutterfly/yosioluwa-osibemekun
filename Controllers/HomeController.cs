@@ -18,11 +18,13 @@ namespace YosioluwaOsibemekun.Controllers
         private readonly ILogger<HomeController> _logger;
         private IHostingEnvironment _env;
         IMailSender _mailSender;
-        public HomeController(ILogger<HomeController> logger, IHostingEnvironment env, IMailSender mailSender)
+        IMailService _mailService;
+        public HomeController(ILogger<HomeController> logger, IHostingEnvironment env, IMailSender mailSender, IMailService mailService)
         {
             _logger = logger;
             _env = env;
             _mailSender = mailSender;
+            _mailService = mailService;
         }
 
         public IActionResult Index()
@@ -42,7 +44,7 @@ namespace YosioluwaOsibemekun.Controllers
 
             try
             {
-                var data = await _mailSender.SendEmail(model.Name, model.Message, model.Subject, model.Email);
+                var data = await _mailService.SendMail(model.Name, model.Email, model.Subject, model.Message);
                 return Json(new DataResult { StatusCode = responses[ApiResponse.ApiResponseStatus.Successful], Message = ApiResponse.ApiResponseStatus.Successful.ToString(), Data = data });
 
             }
@@ -60,7 +62,7 @@ namespace YosioluwaOsibemekun.Controllers
             try
             {
 
-                string filePath = "~/documents/osibemekun_temitoyosi_resume.pdf";
+                string filePath = "~/documents/Resume.pdf";
 
                 Response.Headers.Add("Content-Disposition", "inline; filename=osibemekun_temitoyosi_resume.pdf");
 
@@ -96,7 +98,7 @@ namespace YosioluwaOsibemekun.Controllers
             try
             {
 
-                string filePath = "~/documents/osibemekun_temitoyosi_resume.docx";
+                string filePath = "~/documents/Resume.docx";
 
                 Response.Headers.Add("Content-Disposition", "inline; filename=osibemekun_temitoyosi_resume.docx");
 

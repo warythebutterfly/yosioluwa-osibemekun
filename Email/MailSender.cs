@@ -1,4 +1,5 @@
 ﻿using MailKit.Net.Smtp;
+using MailKit.Security;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using MimeKit;
@@ -72,28 +73,55 @@ namespace YosioluwaOsibemekun.Email
                     "Thanks for contacting me. I would get back to you shortly. Temitoyosi Osibemekun."
                 };
 
-                using (var emailClient = new SmtpClient())
+                //using (var emailClient = new SmtpClient())
+                //{
+
+                //    try
+                //    {
+                //        emailClient.SslProtocols |= SslProtocols.Tls;
+                //        emailClient.CheckCertificateRevocation = false;
+                //        await emailClient.ConnectAsync("smtp.gmail.com", 465, true);
+                //        await emailClient.AuthenticateAsync(_myEmail, _myEmailPassword);
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        _logger.LogInformation("Gmail server failed to authenticate or connect");
+                //        _logger.LogError("sorry! cannot send mail");
+
+                //        throw new Exception("Gmail server failed to authenticate or connect, cannot send mail.");
+                //    }
+
+
+                //    await emailClient.SendAsync(mimeMessage);
+
+                //    await emailClient.DisconnectAsync(true);
+
+                //    _logger.LogError("Email Sent successfully");
+                //}
+
+                using (var smtp = new SmtpClient())
                 {
 
                     try
                     {
-                        emailClient.SslProtocols |= SslProtocols.Tls;
-                        emailClient.CheckCertificateRevocation = false;
-                        await emailClient.ConnectAsync("smtp.gmail.com", 465, true);
-                        await emailClient.AuthenticateAsync(_myEmail, _myEmailPassword);
+                        smtp.SslProtocols |= SslProtocols.Tls;
+                        smtp.CheckCertificateRevocation = false;
+                        await smtp.ConnectAsync("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+                        //smtp.AuthenticationMechanisms.Remove("XOAUTH2");
+                        await smtp.AuthenticateAsync(_myEmail, _myEmailPassword);
                     }
                     catch (Exception ex)
                     {
                         _logger.LogInformation("Gmail server failed to authenticate or connect");
                         _logger.LogError("sorry! cannot send mail");
 
-                        throw new Exception("Gmail server failed to authenticate or connect, cannot send mail.");
+                        throw new ArgumentException("sorry! cannot send mail");
                     }
 
 
-                    await emailClient.SendAsync(mimeMessage);
+                    await smtp.SendAsync(mimeMessage);
 
-                    await emailClient.DisconnectAsync(true);
+                    await smtp.DisconnectAsync(true);
 
                     _logger.LogError("Email Sent successfully");
                 }
