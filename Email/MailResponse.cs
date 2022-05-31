@@ -7,9 +7,9 @@ namespace YosioluwaOsibemekun.Email
 {
     public class MailResponse
     {
-        public string responseHeader { get; set; }
-        public string responseText { get; set; }
-        public string success { get; set; }
-        public int status { get; set; }
+       
+        public string code { get; set; }
+        public string message { get; set; }
+        public string data { get; set; }
     }
 }

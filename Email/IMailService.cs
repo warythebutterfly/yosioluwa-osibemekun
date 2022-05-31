@@ -7,7 +7,7 @@ namespace YosioluwaOsibemekun.Email
 {
     public interface IMailService
     {
-        Task<MailResponse> SendMail(string name, string tomail, string subject, string message);
-        Task<MailResponse> QuickReply(string name, string tomail);
+        Task<MailResponse> SendMail(MailContent mailContent);
+        Task<MailResponse> QuickReply(string name, string tomail, string email, string password);
     }
 }

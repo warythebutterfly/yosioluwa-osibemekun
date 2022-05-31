@@ -3,6 +3,7 @@
     $('#contactForm').submit(function (e) {
         e.preventDefault();
         console.log("before contact form");
+       
         var data = {
             name: $('#contactName').val(),
             email: $('#contactEmail').val(),

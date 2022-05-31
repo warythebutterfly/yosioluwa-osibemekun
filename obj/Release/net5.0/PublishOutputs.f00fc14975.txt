@@ -10,6 +10,7 @@ C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\css\themify-icons.css
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\css\topbar.virtual.css
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\css\virtual.css
+C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\documents\MyResume.pdf
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\documents\Resume.docx
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\documents\Resume.pdf
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\favicon.ico
@@ -24,8 +25,11 @@ C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\bg_banner.jpg
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\bg_image_1.jpg
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\bg_image_2.jpg
+C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\certificates\dsa_cert.jpg
+C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\certificates\ts_cert.jpg
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\laptop.jpg
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\laptopimage.jpg
+C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\laptopimage2.jpg
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\logo\amazon.png
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\logo\company_1.svg
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\logo\company_2.svg
@@ -58,7 +62,12 @@ C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\cervitech.PNG
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\cervitechapp.PNG
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\emdro.PNG
+C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\laptopimage.jpg
+C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\portfolio.PNG
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\sportme.PNG
+C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\stapp.PNG
+C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\warymailer1.PNG
+C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\warymailer2.PNG
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\wlocker.PNG
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\work-1.jpg
 C:\Users\temit\source\repos\YosioluwaOsibemekun\YosioluwaOsibemekun\obj\Release\net5.0\PubTmp\Out\wwwroot\img\work\work-2.jpg

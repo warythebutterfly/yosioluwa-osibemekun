@@ -41,10 +41,18 @@ namespace YosioluwaOsibemekun.Controllers
         public async Task<ActionResult> SendEmail(SendEmailModel model)
         {
             var responses = ApiResponse.GetApiResponseMessages();
-
+            MailContent mailContent = new MailContent();
+            mailContent.clientName = model.name;
+            //mailContent.clientEmail = model.clientEmail;
+            //mailContent.clientPassword = model.clientPassword;
+            mailContent.email = model.email;
+            //mailContent.ccemail = model.ccemail;
+            //model.bccemail = model.bccemail;
+            mailContent.subject = model.subject;
+            mailContent.message = model.message;
             try
             {
-                var data = await _mailService.SendMail(model.Name, model.Email, model.Subject, model.Message);
+                var data = await _mailService.SendMail(mailContent);
                 return Json(new DataResult { StatusCode = responses[ApiResponse.ApiResponseStatus.Successful], Message = ApiResponse.ApiResponseStatus.Successful.ToString(), Data = data });
 
             }
@@ -62,9 +70,9 @@ namespace YosioluwaOsibemekun.Controllers
             try
             {
 
-                string filePath = "~/documents/Resume.pdf";
+                string filePath = "~/documents/MyResume.pdf";
 
-                Response.Headers.Add("Content-Disposition", "inline; filename=osibemekun_temitoyosi_resume.pdf");
+                Response.Headers.Add("Content-Disposition", "inline; filename=resume_osibemekun_temitoyosi.pdf");
 
                 return File(filePath, "application/pdf");
 

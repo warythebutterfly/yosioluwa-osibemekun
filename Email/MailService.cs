@@ -22,27 +22,25 @@ namespace YosioluwaOsibemekun.Email
             _config = configuration;
             _url = _config.GetValue<string>("Url");
             _myEmail = _config.GetValue<string>("MyEmail");
-            
             _myEmailPassword = _config.GetValue<string>("MyEmailPassword");
 
         }
 
         private string _url;
         private string _myEmail;
-        private string _myOtherEmail;
         private string _myEmailPassword;
 
-        public async Task<MailResponse> SendMail(string name, string tomail, string subject, string message)
+        public async Task<MailResponse> SendMail(MailContent mailContent)
         {
             try
             {
-
-                MailContent mailContent = new MailContent();
-                //mailContent.clientName = name;
-                mailContent.email = _myEmail;
-                mailContent.subject = subject;
-                mailContent.message = message + " <br/> - This message was sent by " + tomail + "(" + name + ")";
-
+                string name = mailContent.clientName;
+                string email = mailContent.email;
+                mailContent.message = mailContent.message + " <br/> - This message was sent by " + mailContent.email + "(" + mailContent.clientName + ")";
+                mailContent.clientName = "Temitoyosi's contact form";
+                mailContent.clientEmail = _myEmail;
+                mailContent.email = mailContent.clientEmail;
+                mailContent.clientPassword = _myEmailPassword;
 
                 var payload = StringUtility.SerializeData(mailContent);
 
@@ -52,9 +50,13 @@ namespace YosioluwaOsibemekun.Email
 
                 var responseBody = JsonConvert.DeserializeObject<MailResponse>(dataContent);
 
-                if (responseBody.status == 200) await QuickReply(name, tomail);
+                if (responseBody.code == "200")
+                {
+                    await QuickReply(name, email, mailContent.clientEmail, mailContent.clientPassword);
 
-                return responseBody;
+                    return responseBody;
+                }
+                else throw new ArgumentException(responseBody.message);
             }
             catch (Exception ex)
             {
@@ -65,18 +67,19 @@ namespace YosioluwaOsibemekun.Email
 
         }
 
-        public async Task<MailResponse> QuickReply(string name, string tomail)
+        public async Task<MailResponse> QuickReply(string name, string tomail, string myEmail, string myPassword)
         {
             try
             {
-
                 MailContent mailContent = new MailContent();
                 //mailContent.from = _myEmail;
-                mailContent.name = "Temitoyosi's Contact Form";
+                mailContent.clientName = "Temitoyosi's Contact Form";
+                mailContent.clientEmail = myEmail;
+                mailContent.clientPassword = myPassword;
                 mailContent.email = tomail;
                 mailContent.subject = "Acknowledgement";
                 mailContent.message = "Hi " + name + "," +
-                    "<br/> Thanks for contacting me :). I would get back to you shortly. <br/> <br/> Regards, <br/> Temitoyosi Osibemekun."; ;
+                    "<br/> Thanks for contacting me :). I would get back to you shortly. <br/> <br/> Regards, <br/> Temitoyosi Osibemekun.";
 
 
                 var payload = StringUtility.SerializeData(mailContent);
